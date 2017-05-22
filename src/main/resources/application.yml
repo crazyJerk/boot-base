@@ -1,0 +1,21 @@
+  druid:
+    url: jdbc:mysql://localhost:3306/boot?useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: 921226
+    initialSize: 1
+    minIdle: 1
+    maxActive: 20
+    validationQuery: SELECT 1 FROM DUAL
+    filter: stat
+
+
+  mybatis:
+      type-aliases-package: com.boot.modules
+      mapper-locations: classpath:mapper/*.xml
+
+
+  mapper:
+      mappers:
+          - com.boot.common.base.BaseMapper
+      not-empty: false
+      identity: MYSQL
