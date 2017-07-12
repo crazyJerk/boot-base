@@ -20,6 +20,10 @@ public class DruidAutoConfig {
     @Autowired
     private DruidProperties properties;
 
+    /**
+     * 配置数据库(数据源使用alibaba的druid)
+     * @return
+     */
     @Bean(initMethod = "init", destroyMethod = "close")
     public DataSource druidDataSource() {
         DruidDataSource dataSource = new DruidDataSource();
